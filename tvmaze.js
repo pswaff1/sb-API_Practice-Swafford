@@ -39,7 +39,7 @@ async function getShowsByTerm(term) {
 	// No relevant results in sessionStorage, make API call
 	if (results.length === 0) {
 		// Makes API call to TVAPI to get results.
-		const res = await $.get(`https://api.tvmaze.com/search/shows?q=${term}`);
+		const res = await $.get(`https://api.tvmaze.com/search/shows/?q=${term}`);
 
 		// Invoke map function to condense results to only what is needed
 		results.push(
